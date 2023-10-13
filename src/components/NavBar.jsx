@@ -37,7 +37,7 @@ export const NavBar = () => {
     //     <Container>
     //       <Navbar.Brand href="/">
     //         <img src={logo} alt="Logo" />
-    //         <h4 class="text-light" mt-10  >SSBT's Coding Club</h4>
+    //         <h4 class="t ext-light" mt-10  >SSBT's Coding Club</h4>
 
     //       </Navbar.Brand>
     //       <Navbar.Toggle aria-controls="basic-navbar-nav">
