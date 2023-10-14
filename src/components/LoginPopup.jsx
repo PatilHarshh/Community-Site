@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import GoogleLogin from './GoogleLogin';
 function closeForm(){
     document.querySelector('.home').classList.add('d-none');
 }
@@ -73,8 +74,7 @@ const LoginPopup = () => {
                         </div>
                         <button onClick={submitData} className="button">Login Now</button>
                         <hr></hr>
-                            <div className="googleBtn googleloginbutton googlelogoutbutton" >Continue With Google</div>
-                            
+                            <GoogleLogin /> 
                     </form>
                 </div>
             </div>
