@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {GoogleLogin} from '../components/GoogleLogin';
+import GoogleLogin from '../components/GoogleLogin';
 function closeForm(){
     document.querySelector('.home').classList.add('d-none');
 }
