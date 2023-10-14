@@ -1,5 +1,5 @@
 //Google Login Functionality Here
-//@by PrasadChavan https://prasadchavan.me/
+//by PrasadChavan https://prasadchavan.me/
 import React from "react";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
 import {getAuth, signOut, GoogleAuthProvider, signInWithPopup} from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js';
