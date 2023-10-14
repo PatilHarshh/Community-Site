@@ -1,9 +1,9 @@
 //Google Login Functionality Here
 //by PrasadChavan https://prasadchavan.me/
 import React from "react";
-import initializeApp from "firebase/app";
-import signInWithPopup from "firebase/auth";
-import GoogleAuthProvider from "firebase/auth";
+import initializeApp from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+import signInWithPopup from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+import GoogleAuthProvider from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 
 function GoogleLogin() {
     // Import the functions you need from the SDKs you need
