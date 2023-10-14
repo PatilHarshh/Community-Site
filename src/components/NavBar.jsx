@@ -9,7 +9,7 @@ import { BrowserRouter as Router, NavLink } from "react-router-dom";
 
 export const NavBar = () => {
 
-  // const [activeLink, setActiveLink] = useState('home');
+  const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,28 +26,17 @@ export const NavBar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [])
 
-  // const onUpdateActiveLink = (value) => {
-  //   setActiveLink(value);
-  // }
-
-  function handleSignOut(){
-    alert('logOut')
-    localStorage.removeItem('res');
-    window.location.reload();
+  const onUpdateActiveLink = (value) => {
+    setActiveLink(value);
   }
 
-  function handleSignIn(){
-    document.querySelector('.home').classList.remove('d-none');
-  }
-  
-
-  return (  
+  return (
     // <Router>
     //   <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
     //     <Container>
     //       <Navbar.Brand href="/">
     //         <img src={logo} alt="Logo" />
-    //         <h4 class="t ext-light" mt-10  >SSBT's Coding Club</h4>
+    //         <h4 class="text-light" mt-10  >SSBT's Coding Club</h4>
 
     //       </Navbar.Brand>
     //       <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -86,21 +75,21 @@ export const NavBar = () => {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <NavLink to="/" className="nav-link navbar-link">Home</NavLink>
-              <NavLink to="/events" className="nav-link navbar-link">Events</NavLink>
-              <NavLink to="/about" className="nav-link navbar-link">About</NavLink>
-              <NavLink to="/blogs" className="nav-link navbar-link">Blogs</NavLink>
+              <NavLink to="/" className="navbar-link">Home</NavLink>
+              <NavLink to="/events" className="navbar-link">Events</NavLink>
+              <NavLink to="/about" className="navbar-link">About</NavLink>
+              <NavLink to="/blogs" className="navbar-link">Blogs</NavLink>
             </Nav>
             <span className="navbar-text">
-               <div className="social-icon">
-                 <a href="#"><img src={navIcon1} alt="" /></a>
-                 <a href="#"><img src={navIcon2} alt="" /></a>
-                 <a href="#"><img src={navIcon3} alt="" /></a>
-               </div>
-               <HashLink>
-                 <button onClick={(localStorage.getItem('res')==='res') ? handleSignOut : handleSignIn} className={(localStorage.getItem('res')==='res') ? 'signOutBtn' : 'signInBtn'} id="handleLoginBtn"><span>{(localStorage.getItem('res')==='res') ? 'Sign Out' : 'Login'}</span></button>
-               </HashLink>
-             </span>
+    //           <div className="social-icon">
+    //             <a href="#"><img src={navIcon1} alt="" /></a>
+    //             <a href="#"><img src={navIcon2} alt="" /></a>
+    //             <a href="#"><img src={navIcon3} alt="" /></a>
+    //           </div>
+    //           <HashLink to='#connect'>
+    //             <button className="vvd"><span>Let’s Connect</span></button>
+    //           </HashLink>
+    //         </span>
           </Navbar.Collapse>
         </Container>
       </Navbar>
